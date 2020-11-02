@@ -1,18 +1,15 @@
 { config, pkgs, ... }:
 
 {
-  # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
+  imports = [
+    ./config/shell/zsh.nix
+  ];
 
-  # Home Manager needs a bit of information about you and the
-  # paths it should manage.
+  programs.home-manager.enable = true;
   home.username = "christopher";
   home.homeDirectory = "/home/christopher";
 
-  # This value determines the Home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new Home Manager release introduces backwards
-  # incompatible changes.
+  # The Home Manager release that your configuration is compatible with
   #
   # You can update Home Manager without changing this value. See
   # the Home Manager release notes for a list of state version
@@ -34,9 +31,23 @@
 
   programs.neovim = {
     enable = true;
-    extraConfig = "colorscheme zellner";
     vimAlias = true;
+    configure = {
+      customRC = 
+        builtins.readFile ./config/neovim/config.vim; # + builtins.readFile ./config-coc.vim;
+
+      packages.myVimPackage = with pkgs.vimPlugins; {
+        # loaded on launch
+        start = [ fugitive ];
+        # manually loadable by calling `:packadd $plugin-name`
+        opt = [ ];
+      };
+    };
   };
 
-  home.file.".tmux.conf".source = ./tmux.conf;
+  shell = { zsh = { enable = true; }; };
+
+  home.file.".tmux.conf".source = ./config/tmux.conf;
+  # home.file.".vim/.plugged".source = ./config/neovim/plug.vim;
+  # home.file.".vimrc".source = ./config/neovim/config.vim;
 }
