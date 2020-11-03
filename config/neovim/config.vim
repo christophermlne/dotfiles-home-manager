@@ -51,6 +51,6 @@ set nowritebackup
 
 nmap ; :
 
-"call plug#begin('~/.vim/plugged')
-"  Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-"call plug#end()
+call plug#begin('~/.vim/plugged')
+  Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+call plug#end()

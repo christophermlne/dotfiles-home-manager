@@ -49,6 +49,5 @@
   shell = { zsh = { enable = true; }; };
 
   home.file.".tmux.conf".source = ./config/tmux.conf;
-  # home.file.".vim/.plugged".source = ./config/neovim/plug.vim;
-  # home.file.".vimrc".source = ./config/neovim/config.vim;
+  home.file.".config/nvim/autoload/plug.vim".source = ./config/neovim/plug.vim;
 }

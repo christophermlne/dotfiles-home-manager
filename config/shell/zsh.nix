@@ -17,11 +17,16 @@ in {
         plugins = [ "git" ];
         theme = "minimal";
       };
+      profileExtra = ''
+        set -o vi
+        export EDITOR=vim
+        export VISUAL=vim
+      '';
 
       shellAliases = {
         vi = "vim";
-	gs = "git status";
-	gco = "git checkout";
+	      gs = "git status";
+     	  gco = "git checkout";
       };
     };
   };
