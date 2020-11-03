@@ -17,6 +17,7 @@
   home.stateVersion = "20.09";
 
   home.packages = [
+    pkgs.tig
     pkgs.tree
     pkgs.ctags
     pkgs.zsh
