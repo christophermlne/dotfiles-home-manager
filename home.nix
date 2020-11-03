@@ -34,8 +34,11 @@
     enable = true;
     vimAlias = true;
     configure = {
-      customRC = 
-        builtins.readFile ./config/neovim/config.vim; # + builtins.readFile ./config-coc.vim;
+      customRC =
+        builtins.readFile ./config/neovim/config.vim +
+        builtins.readFile ./config/neovim/settings/solarized.vim +
+        builtins.readFile ./config/neovim/settings/appearance.vim +
+        builtins.readFile ./config/neovim/settings/keymap.vim;
 
       packages.myVimPackage = with pkgs.vimPlugins; {
         # loaded on launch
@@ -49,5 +52,7 @@
   shell = { zsh = { enable = true; }; };
 
   home.file.".tmux.conf".source = ./config/tmux.conf;
+  home.file.".vim/colors/solarized.vim".source = ./config/neovim/settings/solarized.vim;
+  home.file.".vim/settings/solarized.vim".source = ./config/neovim/settings/solarized.vim;
   home.file.".config/nvim/autoload/plug.vim".source = ./config/neovim/plug.vim;
 }
