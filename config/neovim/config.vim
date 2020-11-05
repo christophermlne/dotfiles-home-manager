@@ -11,7 +11,6 @@ set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 
-
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
@@ -23,25 +22,17 @@ syntax on
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
-" The mapleader has to be set before vundle starts loading all
-" the plugins.
+" The mapleader has to be set before Plug starts loading the plugins.
 
 let mapleader=","
 
 " =============== Plug Initialization ===============
-" This loads all the plugins specified in ~/.vim/vundles.vim
-" Use Vundle plugin to manage all other plugins
 
 call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
   Plug 'skwp/vim-colors-solarized'
+  Plug 'xsunsmile/showmarks', { 'dir': '~/.vim/plugged/showmarks.vim' }
 call plug#end()
-
-" if filereadable(expand("~/.vim/vundles.vim"))
-"  source ~/.vim/vundles.vim
-" endif
-
-" au BufNewFile,BufRead *.vundle set filetype=vim
 
 " ================ Turn Off Swap Files ==============
 
@@ -52,7 +43,6 @@ set nowb
 " ================ Persistent Undo ==================
 
 " Keep undo history across sessions, by storing in file.
-" Only works all the time.
 
 if has('persistent_undo') && isdirectory(expand('~').'/.vim/backups')
   silent !mkdir ~/.vim/backups > /dev/null 2>&1
@@ -122,3 +112,7 @@ set smartcase       " ...unless we type a capital
 
 set modelines=0
 set nomodeline
+
+" ================ Showmarks ==========================
+" Tell showmarks to not include the various brace marks (),{}, etc
+let g:showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY"
