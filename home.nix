@@ -38,6 +38,7 @@
         builtins.readFile ./config/neovim/config.vim +
         builtins.readFile ./config/neovim/settings/solarized.vim +
         builtins.readFile ./config/neovim/settings/appearance.vim +
+        builtins.readFile ./config/neovim/settings/ctrlp.vim +
         builtins.readFile ./config/neovim/settings/keymap.vim;
 
       packages.myVimPackage = with pkgs.vimPlugins; {

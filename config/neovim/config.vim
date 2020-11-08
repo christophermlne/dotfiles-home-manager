@@ -32,6 +32,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
   Plug 'skwp/vim-colors-solarized'
   Plug 'xsunsmile/showmarks', { 'dir': '~/.vim/plugged/showmarks.vim' }
+  Plug 'ctrlpvim/ctrlp.vim'
+
+  " Aspirational: replace ctrlp with fzf
+  " https://github.com/junegunn/fzf
 call plug#end()
 
 " ================ Turn Off Swap Files ==============
