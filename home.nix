@@ -57,4 +57,6 @@
   home.file.".vim/settings/solarized.vim".source = ./config/neovim/settings/solarized.vim;
   home.file.".config/nvim/autoload/plug.vim".source = ./config/neovim/plug.vim;
   home.file.".config/vim/plugged/showmarks.vim".source = ./config/neovim/plugins/showmarks.vim;
+  home.file.".gitconfig".source = ./config/git/gitconfig;
+  home.file.".gitignore".source = ./config/git/gitignore;
 }
