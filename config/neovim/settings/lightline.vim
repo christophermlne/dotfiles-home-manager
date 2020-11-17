@@ -24,11 +24,11 @@ function! MyReadonly()
 endfunction
 
 function! MyFugitive()
-  if exists("*fugitive#head")
+  " if exists("*fugitive#head")
     let _ = fugitive#head()
     return strlen(_) ? '⭠ '._ : ''
-  endif
-  return ''
+  " endif
+  " return ''
 endfunction
 
 function! MyFilename()
