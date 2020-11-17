@@ -33,6 +33,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'skwp/vim-colors-solarized'
   Plug 'xsunsmile/showmarks', { 'dir': '~/.vim/plugged/showmarks.vim' }
   Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'tomtom/tcomment_vim'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
   " Aspirational: replace ctrlp with fzf
   " https://github.com/junegunn/fzf
@@ -120,3 +122,5 @@ set nomodeline
 " ================ Showmarks ==========================
 " Tell showmarks to not include the various brace marks (),{}, etc
 let g:showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY"
+
+" ================ Surround ==========================

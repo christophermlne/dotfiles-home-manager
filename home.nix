@@ -17,11 +17,13 @@
   home.stateVersion = "20.09";
 
   home.packages = [
+    pkgs.nodejs
     pkgs.tig
     pkgs.tree
     pkgs.ctags
     pkgs.zsh
     pkgs.tmux
+    pkgs.fzf
   ];
 
   programs.git = {
@@ -39,6 +41,8 @@
         builtins.readFile ./config/neovim/settings/solarized.vim +
         builtins.readFile ./config/neovim/settings/appearance.vim +
         builtins.readFile ./config/neovim/settings/ctrlp.vim +
+        builtins.readFile ./config/neovim/settings/nerdtree.vim +
+        builtins.readFile ./config/neovim/settings/vim-coc.vim +
         builtins.readFile ./config/neovim/settings/keymap.vim;
 
       packages.myVimPackage = with pkgs.vimPlugins; {
