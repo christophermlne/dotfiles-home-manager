@@ -35,6 +35,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'tomtom/tcomment_vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'itchyny/lightline.vim'
 
   " Aspirational: replace ctrlp with fzf
   " https://github.com/junegunn/fzf

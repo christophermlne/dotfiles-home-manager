@@ -43,6 +43,7 @@
         builtins.readFile ./config/neovim/settings/ctrlp.vim +
         builtins.readFile ./config/neovim/settings/nerdtree.vim +
         builtins.readFile ./config/neovim/settings/vim-coc.vim +
+        builtins.readFile ./config/neovim/settings/lightline.vim +
         builtins.readFile ./config/neovim/settings/keymap.vim;
 
       packages.myVimPackage = with pkgs.vimPlugins; {
