@@ -63,5 +63,6 @@
   home.file.".config/nvim/autoload/plug.vim".source = ./config/neovim/plug.vim;
   home.file.".config/vim/plugged/showmarks.vim".source = ./config/neovim/plugins/showmarks.vim;
   home.file.".gitconfig".source = ./config/git/gitconfig;
-  home.file.".gitignore".source = ./config/git/gitignore;
+  home.file.".inputrc".source = ./config/vimify/inputrc;
+  home.file.".editrc".source = ./config/vimify/editrc;
 }
