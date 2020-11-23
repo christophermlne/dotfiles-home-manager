@@ -19,6 +19,8 @@ in {
       };
       prezto = {
         enable = true;
+        editor.keymap = "vi";
+        prompt.theme = "skwp";
       };
       profileExtra = ''
         set -o vi
