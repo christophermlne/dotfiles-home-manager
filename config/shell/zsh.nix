@@ -17,6 +17,9 @@ in {
         plugins = [ "git" ];
         theme = "minimal";
       };
+      prezto = {
+        enable = true;
+      };
       profileExtra = ''
         set -o vi
         export EDITOR=vim
