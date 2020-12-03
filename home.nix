@@ -24,6 +24,7 @@
     pkgs.zsh
     pkgs.tmux
     pkgs.fzf
+    pkgs.yarn
   ];
 
   programs.git = {
