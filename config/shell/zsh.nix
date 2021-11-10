@@ -26,6 +26,7 @@ in {
         set -o vi
         export EDITOR=vim
         export VISUAL=vim
+	. ~/.nix-profile/etc/profile.d/nix.sh
       '';
 
       shellAliases = {
