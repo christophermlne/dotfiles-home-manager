@@ -29,15 +29,13 @@ let mapleader=","
 " =============== Plug Initialization ===============
 
 call plug#begin('~/.vim/plugged')
-  Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
   Plug 'skwp/vim-colors-solarized'
   Plug 'xsunsmile/showmarks', { 'dir': '~/.vim/plugged/showmarks.vim' }
-  Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'tomtom/tcomment_vim'
   Plug 'itchyny/lightline.vim'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'iamcco/coc-vimlsp', {'do': 'yarn install --frozen-lockfile'}
-  Plug 'iamcco/coc-actions', {'do': 'yarn install --frozen-lockfile'}
+
+ " Plug 'neoclide/coc.nvim', {'branch': 'release'}
+ " Plug 'iamcco/coc-vimlsp', {'do': 'yarn install --frozen-lockfile'}
+ " Plug 'iamcco/coc-actions', {'do': 'yarn install --frozen-lockfile'}
 
   " Aspirational: replace ctrlp with fzf
   " https://github.com/junegunn/fzf
@@ -127,3 +125,4 @@ set nomodeline
 let g:showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY"
 
 " ================ Surround ==========================
+"
