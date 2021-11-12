@@ -52,6 +52,7 @@
         fugitive
         ctrlp
         tcomment_vim
+        coc-nvim
       ];
   };
 
