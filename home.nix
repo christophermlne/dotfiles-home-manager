@@ -53,6 +53,7 @@
         ctrlp
         tcomment_vim
         coc-nvim
+        vim-nix
       ];
   };
 
