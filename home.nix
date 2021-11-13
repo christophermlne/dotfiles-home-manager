@@ -43,8 +43,8 @@
       builtins.readFile ./config/neovim/settings/ctrlp.vim +
       builtins.readFile ./config/neovim/settings/appearance.vim +
       builtins.readFile ./config/neovim/settings/keymap.vim +
-      builtins.readFile ./config/neovim/settings/lightline.vim;
-    #   builtins.readFile ./config/neovim/settings/vim-coc.vim +
+      builtins.readFile ./config/neovim/settings/lightline.vim +
+      builtins.readFile ./config/neovim/settings/vim-coc.vim;
 
     plugins =
       with pkgs.vimPlugins; [
@@ -53,6 +53,7 @@
         ctrlp
         tcomment_vim
         coc-nvim
+        coc-pyright
         vim-nix
       ];
   };
