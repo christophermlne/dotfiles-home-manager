@@ -25,6 +25,10 @@
     pkgs.tmux
     pkgs.fzf
     pkgs.yarn
+    pkgs.youtube-dl
+    pkgs.ffmpeg
+    pkgs.bundler
+    pkgs.solargraph
   ];
 
   programs.git = {
@@ -54,6 +58,9 @@
         tcomment_vim
         coc-nvim
         coc-pyright
+        coc-solargraph
+        coc-tsserver
+        coc-eslint
         vim-nix
       ];
   };
