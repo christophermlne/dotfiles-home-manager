@@ -36,5 +36,10 @@ in {
             vim-nix
           ];
         };
+
+        home.file.".config/nvim/colors/solarized.vim".source = ./settings/solarized.vim;
+        home.file.".vim/settings/solarized.vim".source = ./settings/solarized.vim;
+        home.file.".config/nvim/autoload/plug.vim".source = ./plug.vim;
+        home.file.".config/vim/plugged/showmarks.vim".source = ./plugins/showmarks.vim;
   };
 }

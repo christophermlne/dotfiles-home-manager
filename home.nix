@@ -11,7 +11,6 @@
   home.homeDirectory = "/home/christopher";
 
   # The Home Manager release that your configuration is compatible with
-  #
   # You can update Home Manager without changing this value. See
   # the Home Manager release notes for a list of state version
   # changes in each release.
@@ -42,11 +41,6 @@
   shell = { zsh = { enable = true; }; };
 
   home.file.".tmux.conf".source = ./config/tmux.conf;
-  home.file.".config/nvim/colors/solarized.vim".source = ./config/neovim/settings/solarized.vim;
-  home.file.".vim/settings/solarized.vim".source = ./config/neovim/settings/solarized.vim;
-
-  home.file.".config/nvim/autoload/plug.vim".source = ./config/neovim/plug.vim;
-  home.file.".config/vim/plugged/showmarks.vim".source = ./config/neovim/plugins/showmarks.vim;
 
   home.file.".gitconfig".source = ./config/git/gitconfig;
   home.file.".inputrc".source = ./config/vimify/inputrc;
