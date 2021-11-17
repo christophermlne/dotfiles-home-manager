@@ -22,7 +22,7 @@ in {
         editor.keymap = "vi";
         prompt.theme = "skwp";
       };
-      profileExtra = ''
+      initExtra = ''
         set -o vi
         export EDITOR=vim
         export VISUAL=vim
@@ -34,6 +34,9 @@ in {
 	      gs = "git status";
      	  gco = "git checkout";
       };
+
+      enableSyntaxHighlighting = true;
+      enableAutosuggestions = true;
     };
   };
 }
