@@ -3,6 +3,7 @@
 {
   imports = [
     ./config/shell/zsh.nix
+    ./config/neovim/neovim.nix
   ];
 
   programs.home-manager.enable = true;
@@ -37,34 +38,7 @@
     userEmail = "christopher.milne@gmail.com";
   };
 
-  programs.neovim = {
-    enable = true;
-    vimAlias = true;
-    extraConfig =
-      builtins.readFile ./config/neovim/config.vim +
-      builtins.readFile ./config/neovim/settings/nerdtree.vim +
-      builtins.readFile ./config/neovim/settings/solarized.vim +
-      builtins.readFile ./config/neovim/settings/ctrlp.vim +
-      builtins.readFile ./config/neovim/settings/appearance.vim +
-      builtins.readFile ./config/neovim/settings/keymap.vim +
-      builtins.readFile ./config/neovim/settings/lightline.vim +
-      builtins.readFile ./config/neovim/settings/vim-coc.vim;
-
-    plugins =
-      with pkgs.vimPlugins; [
-        nerdtree
-        fugitive
-        ctrlp
-        tcomment_vim
-        coc-nvim
-        coc-pyright
-        coc-solargraph
-        coc-tsserver
-        coc-eslint
-        vim-nix
-      ];
-  };
-
+  neovim = { enable = true; };
   shell = { zsh = { enable = true; }; };
 
   home.file.".tmux.conf".source = ./config/tmux.conf;
