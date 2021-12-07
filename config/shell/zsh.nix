@@ -12,11 +12,6 @@ in {
   config = mkIf cfg.enable {
     programs.zsh = {
       enable = true;
-      # oh-my-zsh = {
-      #   enable = true;
-      #   plugins = [ "git" ];
-      #   # theme = "minimal";
-      # };
       prezto = {
         enable = true;
         editor.keymap = "vi";
@@ -45,6 +40,7 @@ in {
         gs = "git status";
      	  gco = "git checkout";
         fvim = "vim $(fzf)";
+        youtube-dl-audio="youtube-dl --extract-audio --audio-format mp3";
       };
 
       enableSyntaxHighlighting = true;

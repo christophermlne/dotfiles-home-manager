@@ -35,6 +35,9 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'iamcco/coc-vimlsp', {'do': 'yarn install --frozen-lockfile'}
 
+  Plug 'nullvoxpopuli/coc-ember', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'joukevandermaas/vim-ember-hbs'
+
   " Aspirational: replace ctrlp with fzf
   " https://github.com/junegunn/fzf
 call plug#end()

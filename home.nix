@@ -8,7 +8,9 @@
 
   programs.home-manager.enable = true;
   home.username = "christopher";
-  home.homeDirectory = "/home/christopher";
+
+  # how to make this OS-independent?
+  home.homeDirectory = "/Users/christophermilne";
 
   # The Home Manager release that your configuration is compatible with
   # You can update Home Manager without changing this value. See
