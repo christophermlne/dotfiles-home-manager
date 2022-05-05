@@ -23,7 +23,6 @@
     pkgs.nodejs
     pkgs.tig
     pkgs.tree
-    pkgs.ctags
     pkgs.zsh
     pkgs.tmux
     pkgs.fzf
@@ -32,6 +31,9 @@
     pkgs.ffmpeg
     pkgs.bundler
     pkgs.solargraph
+    pkgs.jq
+    pkgs.universal-ctags
+    pkgs.ripgrep
   ];
 
   programs.git = {
