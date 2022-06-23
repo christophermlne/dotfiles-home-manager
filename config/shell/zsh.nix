@@ -31,6 +31,11 @@ in {
         # FIXME: this is overidden because `skwp prompt git_info` isn't a thing.
         # should just use another definition or copy skwp source and make the following change
         export PS1="%F{135}%n%f@%F{166}%m%f %F{118}%~%f \$(git_info) \$ "
+
+        # Open all files modified in a commit or commit range
+        export function gitopen() {
+          vim $(git diff-tree --no-commit-id --name-only -r $1)
+        }
       '';
 
       shellAliases = {
