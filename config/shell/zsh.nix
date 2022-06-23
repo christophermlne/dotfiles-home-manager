@@ -36,6 +36,8 @@ in {
         export function gitopen() {
           vim $(git diff-tree --no-commit-id --name-only -r $1)
         }
+
+        bindkey "^R" history-incremental-pattern-search-backward
       '';
 
       shellAliases = {
