@@ -25,7 +25,7 @@ endfunction
 
 function! MyFugitive()
   " if exists("*fugitive#head")
-    let _ = fugitive#head()
+    let _ = FugitiveHead()
     return strlen(_) ? '⭠ '._ : ''
   " endif
   " return ''
