@@ -38,8 +38,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'nullvoxpopuli/coc-ember', {'do': 'yarn install --frozen-lockfile'}
   Plug 'joukevandermaas/vim-ember-hbs'
 
-  " Aspirational: replace ctrlp with fzf
-  " https://github.com/junegunn/fzf
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " ================ Turn Off Swap Files ==============
