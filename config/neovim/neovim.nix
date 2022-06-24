@@ -22,23 +22,23 @@ in {
         builtins.readFile ./settings/lightline.vim +
         builtins.readFile ./settings/vim-coc.vim;
 
-        plugins =
-          with pkgs.vimPlugins; [
-            nerdtree
-            fugitive
-            ctrlp
-            tcomment_vim
-            coc-nvim
-            coc-pyright
-            coc-solargraph
-            coc-tsserver
-            coc-eslint
-            vim-nix
-          ];
-        };
+      plugins =
+        with pkgs.vimPlugins; [
+          nerdtree
+          fugitive
+          ctrlp
+          tcomment_vim
+          coc-nvim
+          coc-pyright
+          coc-solargraph
+          coc-tsserver
+          coc-eslint
+          vim-nix
+        ];
+      };
 
-        home.file.".vim/settings/solarized.vim".source = ./settings/solarized.vim;
-        home.file.".config/nvim/autoload/plug.vim".source = ./plug.vim;
-        home.file.".config/vim/plugged/showmarks.vim".source = ./plugins/showmarks.vim;
+      home.file.".vim/settings/solarized.vim".source = ./settings/solarized.vim;
+      home.file.".config/nvim/autoload/plug.vim".source = ./plug.vim;
+      home.file.".config/vim/plugged/showmarks.vim".source = ./plugins/showmarks.vim;
   };
 }
