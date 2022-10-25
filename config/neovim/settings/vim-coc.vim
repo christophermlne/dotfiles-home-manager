@@ -5,7 +5,8 @@ let g:coc_global_extensions = [
   \ 'coc-html',
   \ 'coc-vimlsp',
   \ 'coc-highlight',
-  \ 'coc-ember'
+  \ 'coc-ember',
+  \ 'coc-elixir'
 \ ]
 
 " TextEdit might fail if hidden is not set.

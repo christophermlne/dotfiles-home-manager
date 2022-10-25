@@ -34,6 +34,7 @@ in {
           coc-tsserver
           coc-eslint
           vim-nix
+          vim-elixir
         ];
       };
 
