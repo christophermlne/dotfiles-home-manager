@@ -10,7 +10,7 @@
   home.username = "christopher";
 
   # how to make this OS-independent?
-  home.homeDirectory = "/Users/christophermilne";
+  home.homeDirectory = builtins.getEnv "HOME";
 
   # The Home Manager release that your configuration is compatible with
   # You can update Home Manager without changing this value. See
@@ -21,19 +21,20 @@
   home.packages = [
     pkgs.htop
     pkgs.nodejs
+    pkgs.watchman
     pkgs.tig
     pkgs.tree
     pkgs.zsh
     pkgs.tmux
     pkgs.fzf
     pkgs.yarn
-    pkgs.youtube-dl
     pkgs.ffmpeg
     pkgs.bundler
     pkgs.solargraph
     pkgs.jq
     pkgs.universal-ctags
     pkgs.ripgrep
+    pkgs.zulu17
   ];
 
   programs.git = {

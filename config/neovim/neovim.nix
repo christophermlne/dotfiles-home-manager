@@ -19,7 +19,6 @@ in {
         builtins.readFile ./settings/ctrlp.vim +
         builtins.readFile ./settings/appearance.vim +
         builtins.readFile ./settings/keymap.vim +
-        builtins.readFile ./settings/lightline.vim +
         builtins.readFile ./settings/vim-coc.vim;
 
         plugins =

@@ -70,8 +70,8 @@ set expandtab
 
 " Auto indent pasted text
 
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
+nnoremap p ]p
+nnoremap P ]P
 
 filetype plugin on
 filetype indent on
@@ -126,4 +126,3 @@ set nomodeline
 let g:showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY"
 
 " ================ Surround ==========================
-"

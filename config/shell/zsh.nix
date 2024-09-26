@@ -38,6 +38,8 @@ in {
         }
 
         bindkey "^R" history-incremental-pattern-search-backward
+
+        . /opt/homebrew/opt/asdf/libexec/asdf.sh
       '';
 
       shellAliases = {
@@ -50,7 +52,24 @@ in {
         youtube-dl-audio="youtube-dl --extract-audio --audio-format mp3";
       };
 
-      enableSyntaxHighlighting = true;
+      envExtra = "
+        path=('/opt/homebrew/bin/brew' $path)
+        path=('/opt/homebrew/opt/asdf/libexec/asdf.sh' $path)
+
+	      USER=christopher
+
+        export ANDROID_HOME=$HOME/Library/Android/sdk
+        export PATH=$PATH:$ANDROID_HOME/emulator
+        export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+        export PATH
+        export USER
+      ";
+
+      syntaxHighlighting = {
+        enable = true;
+      };
+
       enableAutosuggestions = true;
     };
   };
