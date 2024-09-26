@@ -38,8 +38,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'nullvoxpopuli/coc-ember', {'do': 'yarn install --frozen-lockfile'}
   Plug 'joukevandermaas/vim-ember-hbs'
 
-  " Aspirational: replace ctrlp with fzf
-  " https://github.com/junegunn/fzf
+  " Add Telescope and its dependencies
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.x' }
+  Plug 'nvim-tree/nvim-web-devicons' " Optional, for file icons
+  
 call plug#end()
 
 " ================ Turn Off Swap Files ==============
@@ -126,3 +129,4 @@ set nomodeline
 let g:showmarks_include = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY"
 
 " ================ Surround ==========================
+"

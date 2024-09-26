@@ -16,8 +16,8 @@ in {
         builtins.readFile ./config.vim +
         builtins.readFile ./settings/nerdtree.vim +
         builtins.readFile ./settings/solarized.vim +
-        builtins.readFile ./settings/ctrlp.vim +
         builtins.readFile ./settings/appearance.vim +
+        builtins.readFile ./settings/telescope.vim +
         builtins.readFile ./settings/keymap.vim +
         builtins.readFile ./settings/vim-coc.vim;
 
