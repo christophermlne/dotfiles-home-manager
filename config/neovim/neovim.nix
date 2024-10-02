@@ -21,23 +21,27 @@ in {
         builtins.readFile ./settings/keymap.vim +
         builtins.readFile ./settings/vim-coc.vim;
 
-        plugins =
-          with pkgs.vimPlugins; [
-            nerdtree
-            fugitive
-            ctrlp
-            tcomment_vim
-            coc-nvim
-            coc-pyright
-            coc-solargraph
-            coc-tsserver
-            coc-eslint
-            vim-nix
-          ];
-        };
+      plugins =
+        with pkgs.vimPlugins; [
+          nerdtree
+          fugitive
+          ctrlp
+          tcomment_vim
+          coc-nvim
+          coc-pyright
+          coc-solargraph
+          coc-tsserver
+          coc-eslint
+          vim-nix
+          # Add these lines for Telescope
+          telescope-nvim
+          plenary-nvim
+          nvim-web-devicons
+        ];
+    };
 
-        home.file.".vim/settings/solarized.vim".source = ./settings/solarized.vim;
-        home.file.".config/nvim/autoload/plug.vim".source = ./plug.vim;
-        home.file.".config/vim/plugged/showmarks.vim".source = ./plugins/showmarks.vim;
+    home.file.".vim/settings/solarized.vim".source = ./settings/solarized.vim;
+    home.file.".config/nvim/autoload/plug.vim".source = ./plug.vim;
+    home.file.".config/vim/plugged/showmarks.vim".source = ./plugins/showmarks.vim;
   };
 }

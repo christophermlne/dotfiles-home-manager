@@ -34,3 +34,33 @@ nnoremap <silent> <D-M> <cmd>Telescope current_buffer_tags<cr>
 " Optional: Add some Telescope-specific mappings
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" Add these lines for ripgrep integration
+" Search within files using ripgrep
+nnoremap <leader>rg <cmd>Telescope live_grep<cr>
+
+" Optional: Search for the word under the cursor
+nnoremap <leader>rw <cmd>Telescope grep_string<cr>
+
+" Configure Telescope to use ripgrep
+let g:telescope_vimgrep_arguments = [
+  \ 'rg',
+  \ '--color=never',
+  \ '--no-heading',
+  \ '--with-filename',
+  \ '--line-number',
+  \ '--column',
+  \ '--smart-case'
+  \ ]
+
+" Set up Telescope defaults
+let g:telescope_setup = {
+  \ 'defaults': {
+  \   'vimgrep_arguments': g:telescope_vimgrep_arguments
+  \ }
+  \ }
+
+" Apply the configuration when Telescope is loaded
+if exists(':Telescope')
+  call telescope#setup(g:telescope_setup)
+endif
