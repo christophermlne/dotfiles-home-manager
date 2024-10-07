@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports = [
@@ -7,7 +7,7 @@
   ];
 
   programs.home-manager.enable = true;
-  home.username = "christopher";
+  home.username = builtins.getEnv "USER";
 
   # how to make this OS-independent?
   home.homeDirectory = builtins.getEnv "HOME";
@@ -35,6 +35,7 @@
     pkgs.universal-ctags
     pkgs.ripgrep
     pkgs.zulu17
+    pkgs.github-cli
   ];
 
   programs.git = {
